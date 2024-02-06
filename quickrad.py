@@ -94,7 +94,7 @@ def sflux_over_fields(fields, new_coords, sbdart_args, tmp_dir_parent,
                     sub_coords = [
                             np.array(sb_out["wl"]),
                             np.array(sb_out["z"]),
-                            sb_out["sflux_labels"]
+                            list(sb_out["sflux_labels"])
                             ]
                     ## Make a NaN-filled (c1, ..., cN, wl, z, feats) shaped
                     ## array for each of the N user-specified coordinate axes
