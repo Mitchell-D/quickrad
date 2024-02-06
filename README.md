@@ -6,9 +6,9 @@ incoming and outgoing flux and radiance given plane-parallel cloud
 layers, aerosol properties, surface types, etc.
 
 <p align="center">
-  <img height="512" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_0.png" />
-  <img height="512" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_1.png" />
-  <img height="512" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_2.png" />
+  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_0.png" />
+  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_1.png" />
+  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_2.png" />
 </p>
 
 ## Dependencies
