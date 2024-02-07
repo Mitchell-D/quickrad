@@ -52,14 +52,16 @@ fields,coords = zip(*(
         ## Atmosphere profile
         ("idatm", [1,2,3,4,5,6]),
         ## Cloud height
-        ("zcloud", list(range(1,12,3))),
+        ("zcloud", list(range(1,13,3))),
         ## Cloud optical depth
-        ("tcloud", np.logspace(np.log10(0.01), np.log10(40), 15)),
+        ("tcloud", np.logspace(np.log10(0.01), np.log10(40), 12)),
         ## Cloud particle effective radius
-        ("nre", np.concatenate((range(-24,2,2),range(2,25,2)))),
+        ("nre", np.concatenate((range(-20,2,2),range(2,21,2)))),
         ## Solar zenith angle
-        ("sza", list(range(0, 90, 10))),
+        ("sza", list(range(0, 90, 20))),
         ))
+print(fields)
+print(coords)
 
 ## Directory where sbdart can spawn temporary subdirectories
 tmp_dir = Path("test/sbdart")
@@ -72,7 +74,7 @@ labels,coords,sflux = sflux_over_fields(
         new_coords=coords,
         sbdart_args=sbdart_args,
         tmp_dir_parent=tmp_dir,
-        workers=9,
+        workers=15,
         dtype=np.float32
         )
 

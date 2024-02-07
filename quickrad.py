@@ -26,6 +26,8 @@ import numpy as np
 
 from sbdart_info import default_params
 
+SBDART_PATH = "sbdart"
+
 def sflux_over_fields(fields, new_coords, sbdart_args, tmp_dir_parent,
                       workers=5, dtype=np.float64):
     """
@@ -184,7 +186,8 @@ def _mp_sbdart(args):
     assert "iout" in sbdart_args.keys()
     try:
         return (args, parse_iout(
-            sb_out=dispatch_sbdart(sbdart_args, tmp_dir),
+            sb_out=dispatch_sbdart(
+                sbdart_args, tmp_dir, sbdart_bin=SBDART_PATH),
             iout_id=sbdart_args["iout"], print_stdout=False))
     except Exception as E:
         raise E
