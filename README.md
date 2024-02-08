@@ -22,7 +22,7 @@ layers, aerosol properties, surface types, etc.
 
 Install quickrad as a package by cloning this repository into a
 directory listed in `$PYTHONPATH`. Otherwise, just import relevant
-methods from `get_lut.py`.
+methods from `quickrad.py`.
 
 SBDART should be installed by cloning [the repository][2] and
 running `make -si` to compile with gfortran.
