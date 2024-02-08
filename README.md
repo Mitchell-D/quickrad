@@ -31,7 +31,7 @@ To point quickrad to your SBDART installation, you can move the
 subsequent binary file `sbdart` to a directory in $PATH, or modify
 the `SBDART_PATH` variable at the top of `quickrad.py`.
 
-## Basic Usage
+## Basic usage
 
 The configuration for executing quickrad is the same as for SBDART,
 where a string key is mapped to a numeric value, string, or list of
@@ -55,7 +55,7 @@ defaults, as shown above. This will execute the radiative transfer
 model one time and return the results as documented in the
 corresponding parsing method.
 
-## Large LUT Generation
+## Generating large lookup tables
 
 There are also multiprocessed methods for generating lookup tables
 for a subset of outputs, currently `quickrad.sflux_over_fields` for
@@ -67,6 +67,16 @@ parameter keys) and a nested list of coordinate values at which each
 corresponding field is evaluated. SBDART is executed at each
 combination of coordinate values (in parallel if `workers>1`). The
 user can also provide a dict of arguments applying to every run.
+
+The subsequent lookup table will have dimensions corresponding to
+each label/coordinate pair in order, followed by the default
+dimensions for each output type.
+
+For example, if the fields `["sza", "btemp"]` and coords
+`([30,60,90], [280,290,300,310])` are provided to
+`quickrad.sflux_over_fields`, the subsequent lookup table will be 5D
+like (solar_zenith, surface_temp, wavelength, altitude, feature)
+since the output for spectral flux has 3 default dimensions.
 
 See `get_lut.py` for a worked example of generating a lookup table.
 
