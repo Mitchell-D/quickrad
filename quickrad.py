@@ -24,7 +24,7 @@ import itertools as it
 import shutil
 import numpy as np
 
-from sbdart_info import default_params
+from quickrad.sbdart_info import default_params
 
 SBDART_PATH = "sbdart"
 
