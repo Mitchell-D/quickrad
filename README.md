@@ -6,11 +6,11 @@ incoming and outgoing flux and radiance given plane-parallel cloud
 layers, aerosol properties, surface types, etc.
 
 <p align="center">
-  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_0.png" />
+  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/lwflux_sfc_example3.png" />
 </p>
 <p align="center">
-  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_1.png" />
-  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/sbdart_sample_2.png" />
+  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/bispec_deepcloud.png" />
+  <img height="256" src="https://github.com/Mitchell-D/quickrad/blob/main/images/aero_urban_ocean.png" />
 </p>
 
 ## Dependencies
@@ -71,7 +71,7 @@ user can also provide a dict of arguments applying to every run.
 The lookup table will have dimensions corresponding to
 each label/coordinate pair in order, followed by the default
 dimensions for each output type. For example, if the fields
-`["sza", "btemp"]` and coords `([30,60,90], [280,290,300,310])` are 
+`["sza", "btemp"]` and coords `([30,60,90], [280,290,300,310])` are
 provided to`quickrad.sflux_over_fields`, the subsequent lookup table
 will be 5D like (solar_zenith, surface_temp, wavelength, altitude,
 flux_type) since the output for spectral flux has 3 default dimensions.
