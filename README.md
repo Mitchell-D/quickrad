@@ -68,15 +68,13 @@ corresponding field is evaluated. SBDART is executed at each
 combination of coordinate values (in parallel if `workers>1`). The
 user can also provide a dict of arguments applying to every run.
 
-The subsequent lookup table will have dimensions corresponding to
+The lookup table will have dimensions corresponding to
 each label/coordinate pair in order, followed by the default
-dimensions for each output type.
-
-For example, if the fields `["sza", "btemp"]` and coords
-`([30,60,90], [280,290,300,310])` are provided to
-`quickrad.sflux_over_fields`, the subsequent lookup table will be 5D
-like (solar_zenith, surface_temp, wavelength, altitude, feature)
-since the output for spectral flux has 3 default dimensions.
+dimensions for each output type. For example, if the fields
+`["sza", "btemp"]` and coords `([30,60,90], [280,290,300,310])` are 
+provided to`quickrad.sflux_over_fields`, the subsequent lookup table
+will be 5D like (solar_zenith, surface_temp, wavelength, altitude,
+flux_type) since the output for spectral flux has 3 default dimensions.
 
 See `get_lut.py` for a worked example of generating a lookup table.
 
